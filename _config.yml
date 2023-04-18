@@ -103,5 +103,5 @@ theme: redefine
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: git@miles-font-page.xyz:/var/repo/hexo.git
+  repo: git@www.miles-font-page.xyz:/var/repo/hexo.git
   branch: master
