@@ -5,7 +5,7 @@ import  os
 class Command:
     def StartTest(self):
         # cmd = 'cmd.exe c:\\sam.bat'
-        p = subprocess.Popen("cmd.exe /c" + "E:\PersonalBlog\Blog/StartTest.bat", stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+        p = subprocess.Popen("cmd.exe /c" + "StartTest.bat", stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
         curline = p.stdout.readline()
         while (curline != b''):
             print(curline)
@@ -14,7 +14,7 @@ class Command:
         return
 
     def RunTestPage(self):
-        p = subprocess.Popen("cmd.exe /c" + "E:\PersonalBlog\Blog/RunTestPage.bat", stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+        p = subprocess.Popen("cmd.exe /c" + "RunTestPage.bat", stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
         curline = p.stdout.readline()
         while (curline != b''):
             print(curline)

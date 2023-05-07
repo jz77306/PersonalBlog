@@ -1,1 +1,2 @@
+cd ..
 hexo s
