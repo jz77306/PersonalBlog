@@ -161,6 +161,8 @@ navbar:
     # Archives: 
     #   path: /archives 
     #   icon: fa-regular fa-archive # can be empty
+    # tags: 
+    #   path/tags/ || tags
     # Status: 
     #   path: https://status.evanluo.top/
     #   icon: fa-regular fa-chart-bar
