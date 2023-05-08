@@ -9,18 +9,27 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from Command import Command
 
-class MainWindow(object):
+
+class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(519, 364)
+        Dialog.resize(728, 419)
         self.verticalLayoutWidget = QtWidgets.QWidget(Dialog)
-        self.verticalLayoutWidget.setGeometry(QtCore.QRect(20, 22, 91, 331))
+        self.verticalLayoutWidget.setGeometry(QtCore.QRect(10, 20, 91, 391))
         self.verticalLayoutWidget.setObjectName("verticalLayoutWidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.verticalLayoutWidget)
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout.setObjectName("verticalLayout")
+        self.pushButton_3 = QtWidgets.QPushButton(self.verticalLayoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pushButton_3.sizePolicy().hasHeightForWidth())
+        self.pushButton_3.setSizePolicy(sizePolicy)
+        self.pushButton_3.setMaximumSize(QtCore.QSize(16777215, 30))
+        self.pushButton_3.setObjectName("pushButton_3")
+        self.verticalLayout.addWidget(self.pushButton_3)
         self.pushButton_2 = QtWidgets.QPushButton(self.verticalLayoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -34,6 +43,23 @@ class MainWindow(object):
         self.pushButton.setMaximumSize(QtCore.QSize(16777215, 30))
         self.pushButton.setObjectName("pushButton")
         self.verticalLayout.addWidget(self.pushButton)
+        self.widget = QtWidgets.QWidget(Dialog)
+        self.widget.setGeometry(QtCore.QRect(110, 20, 611, 391))
+        self.widget.setObjectName("widget")
+        self.TitleEdit = QtWidgets.QLineEdit(self.widget)
+        self.TitleEdit.setGeometry(QtCore.QRect(120, 20, 271, 31))
+        self.TitleEdit.setObjectName("TitleEdit")
+        self.label = QtWidgets.QLabel(self.widget)
+        self.label.setGeometry(QtCore.QRect(20, 20, 71, 31))
+        self.label.setAlignment(QtCore.Qt.AlignCenter)
+        self.label.setObjectName("label")
+        self.label_2 = QtWidgets.QLabel(self.widget)
+        self.label_2.setGeometry(QtCore.QRect(20, 70, 71, 31))
+        self.label_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_2.setObjectName("label_2")
+        self.AuthorEdit = QtWidgets.QLineEdit(self.widget)
+        self.AuthorEdit.setGeometry(QtCore.QRect(120, 70, 271, 31))
+        self.AuthorEdit.setObjectName("AuthorEdit")
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
@@ -41,5 +67,8 @@ class MainWindow(object):
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
+        self.pushButton_3.setText(_translate("Dialog", "创建推送"))
         self.pushButton_2.setText(_translate("Dialog", "测试部署"))
         self.pushButton.setText(_translate("Dialog", "测试页面"))
+        self.label.setText(_translate("Dialog", "文章标题"))
+        self.label_2.setText(_translate("Dialog", "文章作者"))
