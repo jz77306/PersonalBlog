@@ -39,8 +39,8 @@ class MainWidget(QMainWindow, Ui_Dialog):  # 继承 QMainWindow 类和 Ui_MainWi
         return
 
     def getInit(self):      #获取用户输入的作者与文章信息
-        author = Ui_Dialog.AuthorEdit.text()
-        title = Ui_Dialog.TitleEdit.text()
+        author = self.AuthorEdit.text()
+        title = self.TitleEdit.text()
         return author, title
 
 
@@ -66,16 +66,16 @@ class MainWidget(QMainWindow, Ui_Dialog):  # 继承 QMainWindow 类和 Ui_MainWi
             suffix += 1
             newfile = f"{author}_{Title}({suffix}).txt"
             filename = f"{author}_{Title}({suffix})"
-            f = open(newfile, "w")
-            f.close()
+        f = open(newfile, "w")
+        f.close()
         print(f"文件 {newfile} 创建成功！")
         return filename
 
     def MakePost(self):
         print(type(Ui_Dialog))
         author, title = self.getInit()
-        self.makeFile(author, title)
-
+        filename = self.makeFile(author, title)
+        initMD(filename)
 
         return
 
